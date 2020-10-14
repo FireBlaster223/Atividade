@@ -1,21 +1,17 @@
-z=0
-x=[]
-while z != -1:
-    z = int(input('Digite a idade: '))
+i = 0
+soma_idade = 0
+while i < quantidade: 
+    idade = int(input("Informe a idade: "))
+    soma_idade = soma_idade + idade
+    i += 1
+media_idade = soma_idade / quantidade
+print("Média das idades é: ", media_idade)
 
-    if z != -1:
-        x.append(z)
+if 0 <= media_idade <= 25:
+    print('Turma jovem')
 
-if len(x) != 0:
-    media = sum(x)/len(x)
+if 26 <= media_idade < 60:
+    print('Turma adulta')
 
-m = round(media,0)
-
-if 0 <= m <= 25:
-    print('Populacao jovem')
-
-if 26 <= m <= 60:
-    print('Populacao adulta')
-
-if m > 60:
-    print('Populacao idosa')
+if media_idade >= 60:
+    print('Turma idosa')
